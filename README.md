@@ -1,5 +1,5 @@
-# frontend ui component (vue version)
-공통 vue ui component 프로젝트 입니다.
+#ui component (vue version)
+ui component 프로젝트 입니다.
 
 ## Project setup
 ```
