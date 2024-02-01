@@ -1,0 +1,97 @@
+{
+    "name": "ui-component-storybook-by-vue",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "build:lib": "vue-cli-service build --inline-vue --target lib --name fe-components && tsc --emitDeclarationOnly",
+        "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+        "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-brands-svg-icons": "^6.4.0",
+        "@fortawesome/free-regular-svg-icons": "^6.4.0",
+        "@fortawesome/free-solid-svg-icons": "^6.4.0",
+        "@fortawesome/vue-fontawesome": "^3.0.3",
+        "core-js": "^3.8.3",
+        "floating-vue": "^2.0.0-beta.20",
+        "vue": "^3.2.47",
+        "vue-router": "^4.1.6",
+        "yt-player": "^3.6.1"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "@storybook/addon-actions": "^6.5.8",
+        "@storybook/addon-essentials": "^6.5.8",
+        "@storybook/addon-interactions": "^6.5.8",
+        "@storybook/addon-links": "^6.5.8",
+        "@storybook/builder-webpack5": "^6.5.16",
+        "@storybook/manager-webpack5": "^6.5.16",
+        "@storybook/testing-library": "^0.0.11",
+        "@storybook/vue3": "^6.5.8",
+        "@types/yt-player": "^3.5.1",
+        "@typescript-eslint/eslint-plugin": "^5.4.0",
+        "@typescript-eslint/parser": "^5.4.0",
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-eslint": "~5.0.0",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-plugin-typescript": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "@vue/compiler-sfc": "^3.3.4",
+        "@vue/eslint-config-typescript": "^9.1.0",
+        "eslint": "^8.35.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^9.9.0",
+        "file-loader": "^6.2.0",
+        "prettier": "^2.4.1",
+        "sass": "^1.32.7",
+        "sass-loader": "^12.0.0",
+        "storybook-addon-designs": "^6.3.1",
+        "svgo-loader": "^4.0.0",
+        "ts-loader": "^9.4.4",
+        "typescript": "~4.5.5",
+        "vue-cli-plugin-storybook": "^3.0.0-rc.1"
+    },
+    "peerDependencies": {
+        "floating-vue": "^2.0.0-beta.20",
+        "vue": "^3.2.47",
+        "vue-router": "^4.1.6",
+        "yt-player": "^3.6.1"
+    },
+    "exports": {
+        ".": "./src/index.ts",
+        "./layout-components": "./src/components/layouts/index.ts",
+        "./function-components": "./src/components/functions/index.ts",
+        "./fe-components": "./dist/fe-components.common.js"
+    },
+    "typesVersions": {
+        "*": {
+            "layout-components": [
+                "src/components/layouts/index.ts"
+            ],
+            "function-components": [
+                "src/components/functions/index.ts"
+            ],
+            "fe-components": [
+                "dist/types/components/functions/index.d.ts"
+            ]
+        }
+    },
+    "gitHook": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,jsx,vue}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    }
+}

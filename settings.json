@@ -1,0 +1,54 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.singleQuote": true,
+    "editor.formatOnSave": false,
+    "window.zoomLevel": 0,
+    "editor.tabSize": 4,
+    // "files.associations": {
+    //     "*.js": "javascriptreact"
+    // },
+    "[javascriptvue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint" : true
+    },
+    "eslint.validate": [
+        {
+          "language": "vue",
+          "autoFix": true
+        },
+        {
+          "language": "typescript",
+          "autoFix": true
+        },
+        {
+          "language": "javascript",
+          "autoFix": true
+        },
+        {
+          "language": "javascriptvue",
+          "autoFix": true
+        },
+        {
+          "language": "typescriptvue",
+          "autoFix": true
+        }
+    ],
+    "eslint.workingDirectories": [
+        {"mode": "auto"}
+    ]
+}
